@@ -2,7 +2,38 @@
 
 .ai-side-elements {
   @media only screen and (max-width: 800px) {
-    display: none;
+    .ai-side-elements-container {
+      position: fixed;
+      bottom: auto;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 10;
+
+      .ai-side-elements-item {
+        margin: 12px 0;
+
+        svg {
+          width: 18px;
+          height: 18px;
+        }
+      }
+
+      .ai-side-elements-line {
+        height: 50px;
+      }
+    }
+
+    .ai-side-elements-left {
+      left: 5px;
+    }
+
+    .ai-side-elements-right {
+      right: 5px;
+
+      .ai-side-elements-text {
+        font-size: 10px;
+      }
+    }
   }
 
   .ai-side-elements-container {
