@@ -1,8 +1,7 @@
 import { Pool } from 'pg';
 
 const pool = new Pool({
-  connectionString:
-    'postgres://f1a3c04af0a7cea6b6bf486d9671622f1a899b254f00054c83535c36e216c57e:sk_aXHBW8DnwC7WxnJkZz7Ok@db.prisma.io:5432/postgres?sslmode=require',
+  connectionString: process.env.DATABASE_URL,
   ssl: {
     rejectUnauthorized: false,
   },
