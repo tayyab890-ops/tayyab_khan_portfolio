@@ -1,0 +1,162 @@
+@import "./theme.scss";
+
+.ai-projects {
+  width: 100vw;
+  min-height: 100vh;
+
+  .ai-projects-container {
+    max-width: 1000px;
+    padding: 100px 0;
+    margin: auto;
+    min-height: 100vh;
+    padding: 50px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .ai-projects-single {
+      margin: 0 0 100px 0;
+    }
+
+    .blank {
+      width: 100%;
+      height: 50px;
+    }
+
+    .ai-projects-image-container {
+      width: 120%;
+      box-shadow: 0 10px 30px -15px $themeColor2;
+
+      .ai-image {
+        width: 100%;
+      }
+
+      .ai-taskbar {
+        background-color: $themeColor2;
+      }
+    }
+
+    .ai-projects-image-container-right {
+      margin-left: -20%;
+    }
+
+    .ai-projects-text-side {
+      max-width: 100%;
+      color: $themeColor3;
+
+      .ai-projects-text-featured {
+        margin: 10px 0px;
+        color: $themeColor4;
+        font-size: 13px;
+        font-weight: 400;
+      }
+
+      .ai-projects-text-title {
+        margin: 0px 0px 20px;
+        font-size: clamp(24px, 5vw, 28px);
+        font-weight: 600;
+        line-height: 1;
+      }
+
+      .ai-projects-text-description {
+        box-shadow: 0 10px 30px -15px $themeColor2;
+        position: relative;
+        padding: 25px;
+        border-radius: $defaultBorder;
+        background-color: $themeColor2;
+        color: $themeColor4;
+        font-size: 14px;
+
+        display: flex;
+        flex-direction: column;
+
+        .ai-text-image-container {
+          width: 100%;
+          box-shadow: 0 10px 30px -15px $themeColor1;
+
+          .ai-image {
+            width: 100%;
+          }
+
+          .ai-taskbar {
+            background-color: $themeColor1;
+          }
+        }
+      }
+
+      .ai-projects-text-tecs {
+        margin: 25px 0px 10px;
+        line-height: 1;
+        font-size: 13px;
+      }
+
+      .ai-projects-tech-badges {
+        margin: 20px 0 10px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+
+        .ai-tech-badge {
+          display: inline-block;
+          padding: 5px 14px;
+          border-radius: 20px;
+          font-size: 12px;
+          font-weight: 600;
+          color: $themeColor4;
+          background: rgba(255, 255, 255, 0.05);
+          border: 1px solid $themeColor4;
+          letter-spacing: 0.5px;
+          transition: all 0.3s ease;
+
+          &:hover {
+            background: $themeColor4;
+            color: $themeColor2;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+          }
+        }
+      }
+
+      .ai-projects-links {
+        margin-top: 15px;
+        display: flex;
+        gap: 12px;
+
+        .ai-project-link {
+          display: inline-block;
+          padding: 8px 20px;
+          border: 1px solid $themeColor4;
+          border-radius: 4px;
+          color: $themeColor4;
+          font-size: 13px;
+          font-weight: 600;
+          text-decoration: none;
+          cursor: pointer;
+          transition: all 0.3s ease;
+          background: transparent;
+
+          &:hover {
+            background: $themeColor4;
+            color: $themeColor2;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+          }
+        }
+      }
+    }
+
+    .ai-projects-text-side-left {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      text-align: right;
+    }
+
+    .ai-projects-text-side-left {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      text-align: right;
+    }
+  }
+}

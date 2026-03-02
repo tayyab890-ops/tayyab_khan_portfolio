@@ -1,0 +1,105 @@
+@import "./theme.scss";
+
+.ai-pre-loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  z-index: 100;
+
+  .ai-pre-loader-boarder {
+    background-color: $themeColor1;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+  }
+
+  .ai-pre-loader-container {
+    width: 100vw;
+    height: 100vw;
+    max-width: 900px;
+    max-height: 900px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    svg {
+      fill: $themeColor3;
+    }
+  }
+
+  .ai-preloader-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    position: relative;
+    animation: fadeInLoader 0.8s ease-out;
+  }
+
+  .ai-preloader-name {
+    font-size: clamp(36px, 8vw, 72px);
+    font-weight: 800;
+    color: $themeColor3;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    animation: slideUp 0.8s ease-out;
+  }
+
+  .ai-preloader-title {
+    font-size: clamp(14px, 3vw, 22px);
+    font-weight: 600;
+    color: $themeColor4;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    margin-top: 10px;
+    animation: slideUp 0.8s ease-out 0.2s both;
+  }
+
+  .ai-preloader-dots {
+    display: flex;
+    gap: 8px;
+    margin-top: 30px;
+    animation: slideUp 0.8s ease-out 0.4s both;
+
+    .ai-preloader-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: $themeColor4;
+      animation: dotBounce 1.4s infinite ease-in-out;
+
+      &:nth-child(1) { animation-delay: 0s; }
+      &:nth-child(2) { animation-delay: 0.2s; }
+      &:nth-child(3) { animation-delay: 0.4s; }
+    }
+  }
+
+  @keyframes slideUp {
+    from { transform: translateY(30px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+  }
+
+  @keyframes fadeInLoader {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  @keyframes dotBounce {
+    0%, 80%, 100% { transform: scale(0.6); opacity: 0.4; }
+    40% { transform: scale(1.2); opacity: 1; }
+  }
+}
+
+.ai-pre-loader-enabled {
+}
+
+.ai-pre-loader-disabled {
+  height: 0;
+  opacity: 0;
+  transition: all 1s cubic-bezier(1, -0.6, 0, 1.92);
+  overflow: hidden;
+}
