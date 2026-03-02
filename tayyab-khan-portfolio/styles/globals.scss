@@ -207,3 +207,34 @@ html {
     background: black;
   }
 } */
+
+// ─── Mobile-only social links bar (between hero & about me) ───
+.ai-mobile-social-bar {
+  display: none;
+}
+
+@media only screen and (max-width: 800px) {
+  .ai-mobile-social-bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 22px;
+    padding: 14px 0;
+
+    a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+
+      svg {
+        stroke: $themeColor3;
+        transition: stroke 0.3s ease;
+      }
+
+      &:active svg {
+        stroke: $themeColor4;
+      }
+    }
+  }
+}

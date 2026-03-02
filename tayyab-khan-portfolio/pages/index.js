@@ -17,6 +17,11 @@ import PreLoader from "../components/PreLoader";
 import Certifications from "../views/Certifications";
 import certifications from "../utils/certifications";
 import WaterMark from "../components/WaterMark";
+import GitHub from "../components/SVGs/GitHub";
+import Instagram from "../components/SVGs/Instagram";
+import Facebook from "../components/SVGs/Facebook";
+import LinkedIn from "../components/SVGs/LinkedIn";
+import { openLink } from "../utils/methods";
 
 const ViewElement = ({ children, id }) => (
   <div id={id} className="view-element">{children}</div>
@@ -44,6 +49,14 @@ export default function Home() {
         <ViewElement id="home">
           <Outer data={outer} />
         </ViewElement>
+
+        {/* Mobile-only social links between hero and about me */}
+        <div className='ai-mobile-social-bar'>
+          <a onClick={() => openLink('https://github.com/tayyab890-ops')} aria-label='GitHub'><GitHub width={18} height={18} /></a>
+          <a onClick={() => openLink('https://www.instagram.com/tayyab__khan_01/?hl=en')} aria-label='Instagram'><Instagram width={18} height={18} /></a>
+          <a onClick={() => openLink('https://www.facebook.com/profile.php?id=100092315658740&ref=NONE_ig_profile_ac')} aria-label='Facebook'><Facebook width={18} height={18} /></a>
+          <a onClick={() => openLink('https://www.linkedin.com/in/tayyab-khan-47619527a')} aria-label='LinkedIn'><LinkedIn width={18} height={18} /></a>
+        </div>
 
         <ViewElement id="my-self">
           <MySelf data={mySelf} />

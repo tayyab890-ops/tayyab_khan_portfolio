@@ -3,11 +3,6 @@ import Gooery from '../../components/GooeryAnimation'
 import DecryptText from '../../components/DecryptText'
 import PropTypes from 'prop-types'
 import Image from 'next/image'
-import GitHub from '../../components/SVGs/GitHub'
-import Instagram from '../../components/SVGs/Instagram'
-import Facebook from '../../components/SVGs/Facebook'
-import LinkedIn from '../../components/SVGs/LinkedIn'
-import { openLink } from '../../utils/methods'
 
 
 const Outer = ({ data: {
@@ -59,13 +54,6 @@ const Outer = ({ data: {
                                     {btn.label}
                                 </button>
                             ))}
-                        </div>
-                        {/* Social links – visible only on mobile */}
-                        <div className='ai-outer-social-links'>
-                            <a onClick={() => openLink('https://github.com/tayyab890-ops')} aria-label='GitHub'><GitHub width={22} height={22} /></a>
-                            <a onClick={() => openLink('https://www.instagram.com/tayyab__khan_01/?hl=en')} aria-label='Instagram'><Instagram width={22} height={22} /></a>
-                            <a onClick={() => openLink('https://www.facebook.com/profile.php?id=100092315658740&ref=NONE_ig_profile_ac')} aria-label='Facebook'><Facebook width={22} height={22} /></a>
-                            <a onClick={() => openLink('https://www.linkedin.com/in/tayyab-khan-47619527a')} aria-label='LinkedIn'><LinkedIn width={22} height={22} /></a>
                         </div>
                     </div>
                     <div className='ai-outer-profile-section d-none d-lg-flex'>
