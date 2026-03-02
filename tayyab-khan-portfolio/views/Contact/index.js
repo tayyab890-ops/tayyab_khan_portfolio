@@ -110,8 +110,8 @@ const Contact = ({ data: {
                         <div className='ai-contact-label'>{label}</div>
                         <div className='ai-contact-title'>{heading}</div>
                         <div className='ai-contact-text'>{description}</div>
-                        {phone && <div className='ai-contact-info'>📞 {phone}</div>}
-                        {email && <div className='ai-contact-info'>✉️ {email}</div>}
+                        {phone && <a href={`tel:${phone}`} className='ai-contact-info ai-contact-link'>📞 {phone}</a>}
+                        {email && <a href={`mailto:${email}`} className='ai-contact-info ai-contact-link'>✉️ {email}</a>}
                         <ContactForm />
                         <div className='ai-contact-button'>
                             <button onClick={button?.onClick} className='ai-button'>
