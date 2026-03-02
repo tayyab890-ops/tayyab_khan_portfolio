@@ -151,6 +151,11 @@
           &:hover { border-color: $themeColor4; color: $themeColor4; }
         }
       }
+
+      // Social links row – hidden on desktop, shown on mobile
+      .ai-outer-social-links {
+        display: none;
+      }
     }
   }
 
@@ -285,6 +290,43 @@
 
         .ai-outer-buttons {
           justify-content: center;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 800px) {
+    .ai-outer-container .ai-outer-text .ai-outer-social-links {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 28px;
+      margin-top: 24px;
+
+      a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        padding: 10px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.06);
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        transition: all 0.3s ease;
+
+        svg {
+          stroke: $themeColor3;
+          transition: stroke 0.3s ease;
+        }
+
+        &:active {
+          background: rgba(0, 212, 255, 0.15);
+          border-color: $themeColor4;
+          transform: scale(1.1);
+
+          svg {
+            stroke: $themeColor4;
+          }
         }
       }
     }

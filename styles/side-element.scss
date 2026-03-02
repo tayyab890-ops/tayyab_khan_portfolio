@@ -1,47 +1,9 @@
 @import "./theme.scss";
 
 .ai-side-elements {
-  // ─── MOBILE: hide email, show only icon links ───
+  // ─── MOBILE: hide everything (links moved to hero) ───
   @media only screen and (max-width: 800px) {
-    // Hide email / right side completely
-    .ai-side-elements-right {
-      display: none !important;
-    }
-
-    // Convert left icons to a static horizontal row at bottom of page
-    .ai-side-elements-left {
-      position: static;
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      justify-content: center;
-      gap: 24px;
-      width: 100%;
-      padding: 18px 0;
-
-      .ai-side-elements-item {
-        margin: 0;
-        cursor: pointer;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-        svg {
-          width: 22px;
-          height: 22px;
-          stroke: $themeColor3;
-          transition: stroke 0.25s ease;
-        }
-
-        &:active svg {
-          stroke: $themeColor4;
-        }
-      }
-
-      .ai-side-elements-line {
-        display: none;
-      }
-    }
+    display: none !important;
   }
 
   // ─── DESKTOP: classic side columns ───
