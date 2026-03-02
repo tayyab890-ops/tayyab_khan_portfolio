@@ -55,7 +55,7 @@
       position: relative;
       z-index: 1;
       max-width: 600px;
-      padding-top: 50px;
+      padding-top: 100px;
 
       .ai-outer-highlight-badge {
         display: inline-flex;
@@ -110,7 +110,7 @@
       }
 
       .ai-outer-description {
-        margin: 20px 0px 0px;
+        margin: 5px 0px 0px;
         max-width: 540px;
         color: $themeColor3;
         font-size: clamp(14px, 1.5vw, 16px);
